@@ -165,6 +165,19 @@ h1 {
 	margin: 20px 0;
 }
 
+.about-btn a {
+	background-color: var(--btn-bg);
+	color: var(--btn-text);
+	padding: 10px 20px;
+	border-radius: 4px;
+	transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.about-btn a:hover {
+	background-color: var(--btn-hover-bg);
+	color: var(--btn-text);
+}
+
 .our-services {
 	padding: 2% 5%;
 }
@@ -177,6 +190,7 @@ h1 {
 .services {
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: space-between;
 }
 
 .service-card {
@@ -185,9 +199,10 @@ h1 {
 	overflow: hidden;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 	transition: transform 0.3s ease, box-shadow 0.3s ease;
-	max-width: 300px;
-	margin: 1%;
-	flex: 1 1 calc(25% - 2%);
+	width: calc(25% - 20px); /* Adjust width to account for margins */
+	margin: 10px;
+	display: flex;
+	flex-direction: column;
 }
 
 .service-card:hover {
@@ -195,14 +210,26 @@ h1 {
 	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
+.card-img {
+	height: 200px; /* Set a fixed height for all image containers */
+	overflow: hidden; /* Hide overflow to maintain aspect ratio */
+}
+
 .card-img img {
 	width: 100%;
-	height: auto;
-	display: block;
+	height: 100%;
+	object-fit: cover; /* Maintain aspect ratio and cover container */
+	object-position: center; /* Center the image */
+	transition: transform 0.3s ease; /* Add smooth transition for hover effect */
+}
+
+.service-card:hover .card-img img {
+	transform: scale(1.1); /* Slight zoom effect on hover */
 }
 
 .card-desc {
 	padding: 15px;
+	flex-grow: 1; /* Allow description to take up remaining space */
 }
 
 .card-desc h3 {
@@ -227,9 +254,29 @@ h1 {
 	padding: 10px 20px;
 	border-radius: 4px;
 	transition: background-color 0.3s ease, color 0.3s ease;
+	display: inline-block; /* Ensure proper padding and clickable area */
 }
 
 .card-btn a:hover {
 	background-color: var(--btn-hover-bg);
 	color: var(--btn-text);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+	.service-card {
+		width: calc(33.33% - 20px);
+	}
+}
+
+@media (max-width: 900px) {
+	.service-card {
+		width: calc(50% - 20px);
+	}
+}
+
+@media (max-width: 600px) {
+	.service-card {
+		width: 100%;
+	}
 }
