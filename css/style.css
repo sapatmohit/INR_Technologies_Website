@@ -1,11 +1,11 @@
 :root {
-	--primary: #262644;
-	--secondary: #69c2c2;
-	--text: #64646c;
-	--bg: #ffffff;
-	--btn-bg: #262644;
-	--btn-hover-bg: #69c2c2;
-	--btn-text: #fff;
+	--primary: #2c3e50; /* Primary color */
+	--secondary: #18bc9c; /* Secondary color */
+	--text: #34495e; /* Text color */
+	--bg: #ecf0f1; /* Background color */
+	--btn-bg: #2c3e50; /* Button background */
+	--btn-hover-bg: #18bc9c; /* Button hover background */
+	--btn-text: #ffffff; /* Button text */
 }
 
 ::-webkit-scrollbar {
@@ -17,7 +17,6 @@
 	padding: 0;
 	box-sizing: border-box;
 	font-family: 'Noto Sans', sans-serif;
-	background-color: var(--bg);
 	color: var(--text);
 }
 
@@ -43,13 +42,17 @@ h1 {
 	padding: 10px 0;
 }
 
+.main-section {
+	background: var(--bg);
+}
+
 .navbar.sticky {
 	position: fixed;
 	top: 0;
 	width: 100%;
-	background-color: rgba(255, 255, 255, 0.95);
 	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 	z-index: 11111;
+	background: var(--bg);
 }
 
 .navbar {
@@ -171,22 +174,22 @@ h1 {
 	color: var(--secondary);
 }
 
-.about-us {
+.homepage .about-us {
 	width: 30%;
 	margin-right: 10px;
 	padding: 15px 0;
 }
 
-.about-us h1 {
+.homepage .about-us h1 {
 	font-size: 26px;
 	font-weight: 700;
 }
 
-.about-us h1 span {
+.homepage .about-us h1 span {
 	color: var(--secondary);
 }
 
-.about-us p {
+.homepage .about-us p {
 	color: var(--text);
 	margin: 20px 0;
 }
@@ -206,6 +209,7 @@ h1 {
 
 .our-services {
 	padding: 2% 5%;
+	background: var(--bg);
 }
 
 .section-title {
@@ -293,6 +297,7 @@ h1 {
 	justify-content: center;
 	align-items: center;
 	padding: 50px 0;
+	background: var(--bg);
 }
 
 .swiper-container-wrapper {
@@ -427,6 +432,10 @@ h1 {
 	background: var(--secondary);
 }
 
+.about {
+	background: var(--bg);
+}
+
 .info {
 	padding: 30px 0;
 }
@@ -470,9 +479,9 @@ h1 {
 	border-radius: 15px; /* Rounded corners */
 }
 
-.team {
-	background-color: var(--primary);
-	padding-bottom: 125px;
+.our-team {
+	background: var(--bg);
+	padding: 80px 0;
 }
 
 .team-item {
@@ -530,6 +539,101 @@ h1 {
 .team-item:hover .team-item-info h3,
 .team-item:hover .team-item-info p {
 	color: var(--primary);
+}
+
+.contact-us {
+	padding: 50px 0;
+	background: var(--bg);
+}
+
+.form {
+	display: flex;
+	justify-content: center;
+}
+
+.mb-4 {
+	width: 600px;
+}
+
+.btn {
+	display: flex;
+	margin: 0 auto;
+	background: var(--primary);
+	color: #ffffff;
+}
+
+.btn:hover {
+	background: var(--secondary);
+}
+
+.footer {
+	padding-top: 50px;
+	background: var(--primary);
+	color: #fff;
+}
+
+.contact-info {
+	display: flex;
+}
+
+.contact-details {
+	margin-left: 100px;
+	width: 35%;
+}
+
+.contact-details i {
+	color: #ffffff;
+}
+
+.contact-details p {
+	font-size: 20px;
+	color: #ffffff;
+}
+
+.contact-details p a {
+	color: #ffffff;
+	padding-left: 60px;
+	font-size: 16px;
+}
+
+.contact-details p img {
+	width: 45px;
+}
+
+/*********************
+Footer Section
+*********************/
+
+.social-links {
+	margin-top: 10px;
+	text-align: center;
+}
+
+.social-links .fab {
+	height: 40px;
+	width: 40px;
+	font-size: 20px;
+	line-height: 40px;
+	border-radius: 10px;
+	border: 1px solid #ffffff;
+	margin: 40px 5px 0;
+	color: #ffffff;
+	cursor: pointer;
+	transition: 0.5s;
+}
+
+.social-links .fab:hover {
+	background: #ffffff;
+	color: var(--primary);
+	transform: translateY(-7px);
+}
+
+.social-links p {
+	color: #ffffff;
+	font-size: 15px;
+	margin-top: 20px;
+	margin-bottom: 0;
+	padding: 10px 0;
 }
 
 /* Responsive adjustments */
