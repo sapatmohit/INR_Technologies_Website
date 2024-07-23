@@ -146,25 +146,3 @@ p {
   background-color: var(--secondary);
   color: #ffffff;
 }
-
-footer {
-  color: var(--text);
-  background-color: #69c2c2;
-  padding: 1.5%;
-  /* text-align: center; */
-}
-
-.footer-container {
-  /* padding: 2%; */
-  margin: 0 auto;
-  width: 95%;
-}
-
-.home-redirect {
-  font-weight: bolder;
-}
-
-.service-redirect {
-  font-weight: bold;
-  border-bottom: solid #64646c;
-}
