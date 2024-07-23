@@ -1,0 +1,170 @@
+:root {
+  --primary: #262644;
+  --secondary: #69c2c2;
+  --text: #64646c;
+  --bg: #eff6f7;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  color: var(--text);
+}
+
+body {
+  background: var(--bg);
+}
+
+li {
+  list-style: none;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1% 0;
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 30%;
+  margin-left: 1%;
+}
+
+.logo-text {
+  width: 80%;
+}
+
+.logo-text h1 {
+  font-size: 24px;
+  color: var(--primary);
+}
+
+.logo-img {
+  width: 20%;
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+  padding: 5%;
+}
+
+.nav {
+  width: 40%;
+  margin-right: 4%;
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style: none;
+}
+
+.nav-list li a {
+  font-size: 18px;
+  font-size: 900;
+  transition: 0.3s ease;
+  color: var(--primary);
+}
+
+.nav-list li a:hover {
+  color: var(--secondary);
+}
+
+.service-section {
+  background-color: #ffffff;
+  padding: 2%;
+  border: 2px solid var(--secondary);
+  border-radius: 12px;
+  margin: 0 auto;
+  width: 80%;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+}
+
+h1,
+p {
+  color: var(--primary);
+}
+
+.service-image {
+  width: 30%;
+}
+
+.service-image img {
+  height: auto;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.service-info {
+  width: 80%;
+  margin-left: 30px;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: var(--secondary);
+  background-color: #ffffff;
+  border: 2px solid var(--secondary);
+  border-radius: 12px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.button:hover {
+  background-color: var(--secondary);
+  color: #ffffff;
+}
+
+footer {
+  color: var(--text);
+  background-color: #69c2c2;
+  padding: 1.5%;
+  /* text-align: center; */
+}
+
+.footer-container {
+  /* padding: 2%; */
+  margin: 0 auto;
+  width: 95%;
+}
+
+.home-redirect {
+  font-weight: bolder;
+}
+
+.service-redirect {
+  font-weight: bold;
+  border-bottom: solid #64646c;
+}
