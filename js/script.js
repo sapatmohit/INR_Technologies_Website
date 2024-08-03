@@ -35,3 +35,38 @@ window.addEventListener('scroll', function () {
 		document.querySelector('.navbar').classList.remove('sticky');
 	}
 });
+
+window.addEventListener('scroll', function () {
+	const navbar = document.querySelector('.navbar');
+	if (window.pageYOffset > 60) {
+		navbar.classList.add('sticky');
+	} else {
+		navbar.classList.remove('sticky');
+	}
+
+	const sections = document.querySelectorAll('.section');
+	const navItems = document.querySelectorAll('.nav-item');
+
+	let currentSection = '';
+
+	sections.forEach((section) => {
+		const sectionTop = section.offsetTop - 100;
+		const sectionHeight = section.clientHeight;
+		if (
+			window.pageYOffset >= sectionTop &&
+			window.pageYOffset < sectionTop + sectionHeight
+		) {
+			currentSection = section.getAttribute('id');
+		}
+	});
+
+	navItems.forEach((item) => {
+		item.classList.remove('active');
+		if (
+			item.querySelector('a').getAttribute('href').substring(1) ===
+			currentSection
+		) {
+			item.classList.add('active');
+		}
+	});
+});
