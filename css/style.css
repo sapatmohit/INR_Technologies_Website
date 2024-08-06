@@ -740,7 +740,7 @@ Media Query
 	}
 
 	.swiper-container-wrapper {
-		width: 100%;
+		width: 50%;
 	}
 
 	.project-title {
@@ -763,7 +763,7 @@ Media Query
 	.team-item {
 		width: 200px;
 		height: 250px;
-		margin: 40px 0;
+		margin: 40px auto;
 	}
 
 	.team-item img {
@@ -804,12 +804,24 @@ Media Query
 
 /* Small Mobile Devices (321px to 480px) */
 @media screen and (min-width: 321px) and (max-width: 480px) {
+	.logo {
+		width: 65%;
+	}
+
+	.navbar {
+		padding: 1%;
+	}
+
 	.logo-text h1 {
 		font-size: 20px;
 	}
 
 	.nav-list li a {
 		font-size: 14px;
+	}
+
+	.carousel-section {
+		width: 100%;
 	}
 
 	.homepage .about-us {
@@ -820,13 +832,83 @@ Media Query
 		width: calc(50% - 20px);
 	}
 
-	.team-item {
+	.service-card .card-img,
+	.card-image {
+		height: 115px;
+	}
+
+	.card-desc {
+		padding: 10px;
+	}
+
+	.card-desc h4 {
+		font-size: 14px;
+	}
+
+	.card-desc p {
+		font-size: 8px;
+		margin-bottom: 0;
+	}
+	.card-btn {
+		padding: 0 0 10px 0;
+	}
+
+	.card-btn a {
+		padding: 4px 8px;
+		font-size: 13px;
+	}
+
+	.swiper-container-wrapper {
 		width: 100%;
+	}
+
+	.project-title {
+		font-size: 16px;
+	}
+
+	.project-description {
+		font-size: 10px;
+	}
+
+	.aboutUsImg {
+		display: none;
+	}
+
+	.team-item {
+		width: 300px;
+		height: 275px;
+		margin: 40px auto;
+	}
+
+	.team-item img {
+		height: 275px;
+	}
+
+	.team-item-info h3 {
+		font-size: 12px;
+		margin: 0 0 4px;
+	}
+
+	.team-item p {
+		font-size: 12px;
+		margin-bottom: 0;
 	}
 
 	.contact-details {
 		width: 100%;
 		margin-left: 0;
+	}
+
+	.info h3 {
+		font-size: 24px;
+	}
+
+	.info p {
+		font-size: 12px;
+	}
+
+	.our-team {
+		padding: 0;
 	}
 
 	.mb-4 {
@@ -912,128 +994,183 @@ Media Query
 
 /* Larger Laptops and Small Desktops (1025px to 1440px) */
 @media screen and (min-width: 1025px) and (max-width: 1440px) {
-	.homepage .about-us p {
-		font-size: 15px;
-	}
-
-	.card-desc h4 {
-		font-size: 22px;
-	}
-
-	.info p {
-		font-size: 15px;
-	}
-
-	.contact-details {
-		width: 50%;
-		margin-left: 25%;
-	}
-}
-
-/* Desktops and Large Screens (1441px to 1920px) */
-@media screen and (min-width: 1441px) and (max-width: 1920px) {
-	.homepage .about-us p {
-		font-size: 16px;
-	}
-
-	.card-desc h4 {
-		font-size: 24px;
-	}
-
-	.info p {
-		font-size: 16px;
-	}
-
-	.contact-details {
-		width: 40%;
-		margin-left: 30%;
-	}
-}
-
-/* Extra Large Screens (above 1920px) */
-@media screen and (min-width: 1921px) {
-	.homepage .about-us p {
-		font-size: 18px;
-	}
-
-	.card-desc h4 {
-		font-size: 26px;
-	}
-
-	.info p {
-		font-size: 18px;
-	}
-
-	.contact-details {
-		width: 30%;
-		margin-left: 35%;
-	}
-
-	.container {
-		max-width: 1800px;
-		margin: 0 auto;
-	}
-}
-
-/* Adjustments for navigation on smaller screens */
-@media screen and (max-width: 768px) {
-	.hamburger {
-		display: block;
-	}
-
 	.nav {
-		position: fixed;
-		left: 100%;
-		top: 70px;
-		z-index: 11;
-		gap: 0;
-		flex-direction: column;
-		background-color: var(--bg);
+		width: 65%;
+	}
+
+	.nav-list li a {
+		font-size: 16px;
+	}
+
+	.homepage .about-us h1 {
+		font-size: 18px;
+	}
+
+	.homepage .about-us p {
+		font-size: 10px;
+	}
+
+	.about-btn a {
+		padding: 6px 12px;
+	}
+
+	.card-img {
+		height: 150px;
+	}
+
+	.card-desc h4 {
+		font-size: 18px;
+	}
+
+	.card-desc p {
+		font-size: 12px;
+	}
+
+	.card-btn a {
+		padding: 6px 12px;
+	}
+
+	.info h3 {
+		font-size: 32px;
+	}
+
+	.info p {
+		font-size: 15px;
+	}
+
+	.contact-row {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.map {
+		width: 250px;
+	}
+	.contact-details {
 		width: 100%;
 		text-align: center;
-		transition: 0.3s;
-		box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
-	}
-
-	.nav.active {
-		left: 0;
-	}
-
-	.nav-list {
-		flex-direction: column;
-	}
-
-	.nav-list li {
-		margin: 16px 0;
-	}
-
-	.hamburger.active .bar:nth-child(2) {
-		opacity: 0;
-	}
-
-	.hamburger.active .bar:nth-child(1) {
-		transform: translateY(8px) rotate(45deg);
-	}
-
-	.hamburger.active .bar:nth-child(3) {
-		transform: translateY(-8px) rotate(-45deg);
-	}
-}
-
-/* Adjustments for footer on smaller screens */
-@media screen and (max-width: 768px) {
-	.contact-info {
-		flex-direction: column;
-	}
-
-	.map,
-	.contact-details {
-		width: 100%;
+		margin-top: 20px;
 		margin-left: 0;
 	}
 
-	.map iframe {
-		width: 100%;
-		height: 250px;
+	/* Desktops and Large Screens (1441px to 1920px) */
+	@media screen and (min-width: 1441px) and (max-width: 1920px) {
+		.homepage .about-us p {
+			font-size: 16px;
+		}
+
+		.card-desc h4 {
+			font-size: 24px;
+		}
+
+		.info p {
+			font-size: 16px;
+		}
+
+		.contact-details {
+			width: 40%;
+			margin-left: 30%;
+		}
+	}
+
+	/* Extra Large Screens (above 1920px) */
+	@media screen and (min-width: 1921px) {
+		.homepage .about-us p {
+			font-size: 18px;
+		}
+
+		.card-desc h4 {
+			font-size: 26px;
+		}
+
+		.info p {
+			font-size: 18px;
+		}
+
+		.contact-details {
+			width: 30%;
+			margin-left: 85px;
+		}
+
+		.container {
+			max-width: 1800px;
+			margin: 0 auto;
+		}
+	}
+
+	/* Adjustments for navigation on smaller screens */
+	@media screen and (max-width: 768px) {
+		.aboutUsImg {
+			display: none;
+		}
+		.hamburger {
+			display: block;
+			margin-right: 25px;
+		}
+		.team-item {
+			margin-bottom: 100px;
+		}
+		.our-team {
+			padding: 0;
+		}
+
+		.nav {
+			position: fixed;
+			left: 100%;
+			top: 70px;
+			z-index: 11;
+			gap: 0;
+			flex-direction: column;
+			background-color: var(--bg);
+			width: 100%;
+			text-align: center;
+			transition: 0.3s;
+			box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+		}
+
+		.nav.active {
+			left: 0;
+		}
+
+		.nav-list {
+			flex-direction: column;
+		}
+
+		.nav-list li {
+			margin: 16px 0;
+		}
+
+		.hamburger.active .bar:nth-child(2) {
+			opacity: 0;
+		}
+
+		.hamburger.active .bar:nth-child(1) {
+			transform: translateY(8px) rotate(45deg);
+		}
+
+		.hamburger.active .bar:nth-child(3) {
+			transform: translateY(-8px) rotate(-45deg);
+		}
+
+		.contact-details {
+			margin-top: 30px;
+		}
+
+		.contact-info {
+			width: 80%;
+			flex-direction: column;
+			margin: 0 auto;
+		}
+
+		.map,
+		.contact-details {
+			width: 100%;
+			margin-left: 0;
+		}
+
+		.map iframe {
+			width: 100%;
+			height: 250px;
+		}
 	}
 }
