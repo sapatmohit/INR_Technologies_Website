@@ -497,6 +497,10 @@ h1 {
 	border-radius: 15px; /* Rounded corners */
 }
 
+.desc {
+	width: 75%;
+}
+
 .aboutUsImg img {
 	width: 100%; /* Make sure the image fills the entire div */
 	height: 100%; /* Ensure the image height matches the div height */
@@ -665,159 +669,129 @@ Footer Section
 Media Query
 ********************/
 
-/* Smartwatch or Very Small Screens (up to 320px) */
-@media screen and (max-width: 320px) {
-	.custom-carousel-control-prev {
-		left: -10px;
-	}
-	.custom-carousel-control-next {
-		right: -10px;
-	}
-	.navbar.sticky {
-		width: 320px;
-		overflow: hidden;
-	}
-	.navbar {
-		padding: 3%;
-	}
-	.logo {
-		width: 70%;
+@media screen and (max-width: 1440px) {
+	.nav {
+		width: 65%;
 	}
 
-	.logo-img {
-		width: 30%;
+	.homepage .about-us h1 {
+		font-size: 18px;
 	}
-	.logo-text {
-		margin-top: 8px;
+
+	.homepage .about-us p {
+		font-size: 10px;
 	}
-	.logo-text h1 {
+
+	.about-btn a {
+		padding: 6px 12px;
+	}
+
+	.card-img {
+		height: 150px;
+	}
+
+	.card-desc h4 {
+		font-size: 18px;
+	}
+
+	.card-desc p {
+		font-size: 12px;
+	}
+
+	.info h3 {
+		font-size: 32px;
+	}
+
+	.info p {
 		font-size: 15px;
 	}
 
-	.hamburger {
-		margin: 0 15px;
+	.contact-row {
+		display: flex;
+		justify-content: space-between;
 	}
-	.homepage .about-us {
-		display: none;
+
+	.map {
+		width: 250px;
+	}
+
+	.contact-details {
+		width: 100%;
+		text-align: center;
+		margin-top: 20px;
+		margin-left: 0;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.nav {
+		width: 60%;
 	}
 
 	.carousel-section {
 		width: 100%;
+		margin: 25px 0;
 	}
 
-	.nav-list li a {
-		font-size: 12px;
+	.homepage .about-us {
+		width: 100%;
+		margin-top: 20px;
 	}
 
 	.service-card {
-		width: 100%;
-	}
-
-	.service-card .card-img,
-	.card-image {
-		height: 115px;
-	}
-
-	.card-desc {
-		padding: 10px;
-	}
-
-	.card-desc h4 {
-		font-size: 14px;
-	}
-
-	.card-desc p {
-		font-size: 8px;
-		margin-bottom: 0;
-	}
-	.card-btn {
-		padding: 0 0 10px 0;
-	}
-
-	.card-btn a {
-		padding: 4px 8px;
-		font-size: 13px;
-	}
-
-	.swiper-container-wrapper {
-		width: 50%;
-	}
-
-	.project-title {
-		font-size: 16px;
-	}
-
-	.project-description {
-		font-size: 10px;
-	}
-
-	.info h3 {
-		font-size: 18px;
-		margin-bottom: 0;
-	}
-
-	.aboutUsImg {
-		display: none;
+		width: calc(33.33% - 20px);
 	}
 
 	.team-item {
-		width: 200px;
-		height: 250px;
-		margin: 40px auto;
-	}
-
-	.team-item img {
-		height: 250px;
-	}
-
-	.team-item-info h3 {
-		font-size: 12px;
-		margin: 0 0 4px;
-	}
-
-	.team-item p {
-		font-size: 12px;
-		margin-bottom: 0;
-	}
-
-	.our-team {
-		padding: 20px 0;
-	}
-
-	.map,
-	.contact-details {
-		width: 80% !important;
+		width: calc(33.33% - 20px);
 	}
 
 	.contact-details {
-		margin-top: 40px !important;
-	}
-
-	.social-links p {
-		padding: 10px;
+		width: 60%;
+		margin-left: 20%;
 	}
 
 	.mb-4 {
-		width: 100%;
+		width: 80%;
 	}
 }
 
-/* Small Mobile Devices (321px to 480px) */
-@media screen and (min-width: 321px) and (max-width: 480px) {
+@media screen and (max-width: 768px) {
+	.homepage {
+		flex-direction: column;
+	}
+
+	.carousel-section {
+		width: 100%;
+		margin: 15px 0;
+	}
+
+	.homepage .about-us {
+		width: 100%;
+		margin-right: 0;
+	}
+
+	.service-card {
+		width: calc(50% - 20px);
+	}
+
+	.team-item {
+		width: calc(50% - 20px);
+	}
+
+	.contact-details {
+		width: 80%;
+		margin-left: 10%;
+	}
+
+	.mb-4 {
+		width: 90%;
+	}
+}
+
+@media screen and (max-width: 480px) {
 	.logo {
 		width: 65%;
-	}
-
-	.navbar {
-		padding: 1%;
-	}
-
-	.logo-text h1 {
-		font-size: 20px;
-	}
-
-	.nav-list li a {
-		font-size: 14px;
 	}
 
 	.carousel-section {
@@ -837,10 +811,6 @@ Media Query
 		height: 115px;
 	}
 
-	.card-desc {
-		padding: 10px;
-	}
-
 	.card-desc h4 {
 		font-size: 14px;
 	}
@@ -848,14 +818,6 @@ Media Query
 	.card-desc p {
 		font-size: 8px;
 		margin-bottom: 0;
-	}
-	.card-btn {
-		padding: 0 0 10px 0;
-	}
-
-	.card-btn a {
-		padding: 4px 8px;
-		font-size: 13px;
 	}
 
 	.swiper-container-wrapper {
@@ -868,10 +830,6 @@ Media Query
 
 	.project-description {
 		font-size: 10px;
-	}
-
-	.aboutUsImg {
-		display: none;
 	}
 
 	.team-item {
@@ -906,271 +864,204 @@ Media Query
 	.info p {
 		font-size: 12px;
 	}
+}
+
+@media screen and (max-width: 320px) {
+	.custom-carousel-control-prev {
+		left: -10px;
+	}
+
+	.custom-carousel-control-next {
+		right: -10px;
+	}
+
+	.navbar.sticky {
+		width: 320px;
+		overflow: hidden;
+	}
+
+	.navbar {
+		padding: 3%;
+	}
+
+	.logo {
+		width: 70%;
+	}
+
+	.logo-img {
+		width: 30%;
+	}
+
+	.logo-text {
+		margin-top: 8px;
+	}
+
+	.logo-text h1 {
+		font-size: 15px;
+	}
+
+	.hamburger {
+		margin: 0 15px;
+	}
+
+	.service-card {
+		width: 100%;
+	}
+
+	.swiper-container-wrapper {
+		width: 50%;
+	}
+
+	.aboutUsImg {
+		display: none;
+	}
+
+	.team-item {
+		width: 200px;
+		height: 250px;
+	}
+
+	.team-item img {
+		height: 250px;
+	}
+
+	.our-team {
+		padding: 20px 0;
+	}
+
+	.map,
+	.contact-details {
+		width: 80% !important;
+	}
+
+	.contact-details {
+		margin-top: 40px !important;
+	}
+
+	.social-links p {
+		padding: 10px;
+	}
+}
+
+/* Navigation styles for smaller screens */
+@media screen and (max-width: 768px) {
+	.aboutUsImg {
+		display: none;
+	}
+
+	.hamburger {
+		display: block;
+		margin-right: 25px;
+	}
+
+	.team-item {
+		margin-bottom: 100px;
+	}
 
 	.our-team {
 		padding: 0;
 	}
 
-	.mb-4 {
+	.nav {
+		position: fixed;
+		left: 100%;
+		top: 70px;
+		z-index: 11;
+		gap: 0;
+		flex-direction: column;
+		background-color: var(--bg);
 		width: 100%;
-	}
-}
-
-/* Tablets (481px to 768px) */
-@media screen and (min-width: 481px) and (max-width: 768px) {
-	.logo-text h1 {
-		font-size: 22px;
+		text-align: center;
+		transition: 0.3s;
+		box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
 	}
 
-	.nav-list li a {
-		font-size: 16px;
+	.nav.active {
+		left: 0;
 	}
 
-	.homepage {
+	.nav-list {
 		flex-direction: column;
 	}
 
-	.carousel-section {
-		width: 100%;
-		margin: 15px 0;
+	.nav-list li {
+		margin: 16px 0;
 	}
 
-	.homepage .about-us {
-		width: 100%;
-		margin-right: 0;
+	.hamburger.active .bar:nth-child(2) {
+		opacity: 0;
 	}
 
-	.service-card {
-		width: calc(50% - 20px);
+	.hamburger.active .bar:nth-child(1) {
+		transform: translateY(8px) rotate(45deg);
 	}
 
-	.team-item {
-		width: calc(50% - 20px);
+	.hamburger.active .bar:nth-child(3) {
+		transform: translateY(-8px) rotate(-45deg);
 	}
 
 	.contact-details {
+		margin-top: 30px;
+	}
+
+	.contact-info {
 		width: 80%;
-		margin-left: 10%;
+		flex-direction: column;
+		margin: 0 auto;
 	}
 
-	.mb-4 {
-		width: 90%;
-	}
-}
-
-/* Small Laptops (769px to 1024px) */
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-	.nav {
-		width: 60%;
-	}
-
-	.carousel-section {
-		width: 100%;
-		margin: 25px 0;
-	}
-
-	.homepage .about-us {
-		width: 100%;
-		margin-top: 20px;
-	}
-
-	.service-card {
-		width: calc(33.33% - 20px);
-	}
-
-	.team-item {
-		width: calc(33.33% - 20px);
-	}
-
-	.contact-details {
-		width: 60%;
-		margin-left: 20%;
-	}
-
-	.mb-4 {
-		width: 80%;
-	}
-}
-
-/* Larger Laptops and Small Desktops (1025px to 1440px) */
-@media screen and (min-width: 1025px) and (max-width: 1440px) {
-	.nav {
-		width: 65%;
-	}
-
-	.nav-list li a {
-		font-size: 16px;
-	}
-
-	.homepage .about-us h1 {
-		font-size: 18px;
-	}
-
-	.homepage .about-us p {
-		font-size: 10px;
-	}
-
-	.about-btn a {
-		padding: 6px 12px;
-	}
-
-	.card-img {
-		height: 150px;
-	}
-
-	.card-desc h4 {
-		font-size: 18px;
-	}
-
-	.card-desc p {
-		font-size: 12px;
-	}
-
-	.card-btn a {
-		padding: 6px 12px;
-	}
-
-	.info h3 {
-		font-size: 32px;
-	}
-
-	.info p {
-		font-size: 15px;
-	}
-
-	.contact-row {
-		display: flex;
-		justify-content: space-between;
-	}
-
-	.map {
-		width: 250px;
-	}
+	.map,
 	.contact-details {
 		width: 100%;
-		text-align: center;
-		margin-top: 20px;
 		margin-left: 0;
 	}
 
-	/* Desktops and Large Screens (1441px to 1920px) */
-	@media screen and (min-width: 1441px) and (max-width: 1920px) {
-		.homepage .about-us p {
-			font-size: 16px;
-		}
+	.map iframe {
+		width: 100%;
+		height: 250px;
+	}
+}
 
-		.card-desc h4 {
-			font-size: 24px;
-		}
-
-		.info p {
-			font-size: 16px;
-		}
-
-		.contact-details {
-			width: 40%;
-			margin-left: 30%;
-		}
+/* Larger screen styles */
+@media screen and (min-width: 1441px) {
+	.homepage .about-us p {
+		font-size: 16px;
 	}
 
-	/* Extra Large Screens (above 1920px) */
-	@media screen and (min-width: 1921px) {
-		.homepage .about-us p {
-			font-size: 18px;
-		}
-
-		.card-desc h4 {
-			font-size: 26px;
-		}
-
-		.info p {
-			font-size: 18px;
-		}
-
-		.contact-details {
-			width: 30%;
-			margin-left: 85px;
-		}
-
-		.container {
-			max-width: 1800px;
-			margin: 0 auto;
-		}
+	.card-desc h4 {
+		font-size: 24px;
 	}
 
-	/* Adjustments for navigation on smaller screens */
-	@media screen and (max-width: 768px) {
-		.aboutUsImg {
-			display: none;
-		}
-		.hamburger {
-			display: block;
-			margin-right: 25px;
-		}
-		.team-item {
-			margin-bottom: 100px;
-		}
-		.our-team {
-			padding: 0;
-		}
+	.info p {
+		font-size: 16px;
+	}
 
-		.nav {
-			position: fixed;
-			left: 100%;
-			top: 70px;
-			z-index: 11;
-			gap: 0;
-			flex-direction: column;
-			background-color: var(--bg);
-			width: 100%;
-			text-align: center;
-			transition: 0.3s;
-			box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
-		}
+	.contact-details {
+		width: 40%;
+		margin-left: 85px;
+	}
+}
 
-		.nav.active {
-			left: 0;
-		}
+@media screen and (min-width: 1921px) {
+	.homepage .about-us p {
+		font-size: 18px;
+	}
 
-		.nav-list {
-			flex-direction: column;
-		}
+	.card-desc h4 {
+		font-size: 26px;
+	}
 
-		.nav-list li {
-			margin: 16px 0;
-		}
+	.info p {
+		font-size: 18px;
+	}
 
-		.hamburger.active .bar:nth-child(2) {
-			opacity: 0;
-		}
+	.contact-details {
+		width: 30%;
+		margin-left: 85px;
+	}
 
-		.hamburger.active .bar:nth-child(1) {
-			transform: translateY(8px) rotate(45deg);
-		}
-
-		.hamburger.active .bar:nth-child(3) {
-			transform: translateY(-8px) rotate(-45deg);
-		}
-
-		.contact-details {
-			margin-top: 30px;
-		}
-
-		.contact-info {
-			width: 80%;
-			flex-direction: column;
-			margin: 0 auto;
-		}
-
-		.map,
-		.contact-details {
-			width: 100%;
-			margin-left: 0;
-		}
-
-		.map iframe {
-			width: 100%;
-			height: 250px;
-		}
+	.container {
+		max-width: 1800px;
+		margin: 0 auto;
 	}
 }
